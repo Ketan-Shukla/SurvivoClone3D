@@ -1,0 +1,60 @@
+{
+    "name": "touchcontrols",
+    "maps": [
+        {
+            "name": "Move",
+            "id": "bb7bd33b-3e0a-46d5-9cfc-946bf48a7dce",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "61639fd6-48d4-427f-8943-d38d48345da2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "34b8a97f-45f7-4d0b-a34d-bf10c004fe9d",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "jump",
+            "id": "9fa41cf8-1d25-4bcd-b7a8-32901917634a",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "14848d7b-ad62-4942-ba11-d2975c57c269",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "49711d5d-6f4c-4266-a61d-1fb6bf9dbe1a",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
