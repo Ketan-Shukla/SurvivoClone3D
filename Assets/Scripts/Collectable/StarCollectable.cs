@@ -20,7 +20,7 @@ public class StarCollectable : Collectable
 
     public void OnAnimationComplete()
      {
-     collectableController.OnPickedUp(this);
+        collectableController.OnPickedUp(this);
      }
 
     public void DelayCall(float delay, System.Action callback)

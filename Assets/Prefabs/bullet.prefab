@@ -911,8 +911,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828bcddb3b3f3644eafc46f654af490f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  speed: 10
+  damage: 2
+  speed: 15
+  bulletOrigin: 
   <DeathTimer>k__BackingField: 2
 --- !u!1 &9104428664079806820
 GameObject:

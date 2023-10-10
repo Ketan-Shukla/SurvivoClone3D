@@ -9,7 +9,7 @@ public class CharacterController : MonoBehaviour, IPlayerCanHit, IHealth
 {
 	private CharacterMovement characterMovement;
 	private NavMeshAgent navAgent;
-	private int maxHealth = 5000;
+	private int maxHealth = 2500;
 	private float health;
 	private PlayerInput pi;
 	private BoxCollider colliderBox;

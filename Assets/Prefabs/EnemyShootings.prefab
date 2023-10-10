@@ -1676,6 +1676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinSpawn: {fileID: 1424266185982629788, guid: d298af4c74b001445800f23da7c39091,
     type: 3}
+  healthSpawn: {fileID: 7668379363643325140, guid: d1a85858b2830014fbb00d4a440a6326,
+    type: 3}
   coinSpawnLocation: {fileID: 583045466}
 --- !u!1 &8763450722375400229
 GameObject:

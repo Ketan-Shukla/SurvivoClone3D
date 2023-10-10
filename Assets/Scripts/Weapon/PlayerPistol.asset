@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1489e3be47d4afa4e83f22e720ccdd49, type: 3}
   m_Name: PlayerPistol
   m_EditorClassIdentifier: 
-  fireRate: 0.5
+  fireRate: 0.3

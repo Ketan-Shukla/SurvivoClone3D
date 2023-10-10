@@ -45,7 +45,7 @@ public class CollectableController
                 StarController starController = GameObject.FindObjectOfType<StarController>();
                 starController.PickupStar();
                 gobj.GetComponent<Animator>().SetTrigger("pickedUp");
-                gobj.GetComponent<StarCollectable>().DelayCall(gobj.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length * 2,
+                gobj.GetComponent<StarCollectable>().DelayCall(gobj.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length * 3,
                 () =>
                 {
                     OnPickedUp(gobj.GetComponent<Collectable>());

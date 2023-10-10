@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class CameraController
 {
-	private const float FOLLOW_DIST_BACK = -10f;
-	private const float FOLLOW_DIST_UP = 10f;
+	private const float FOLLOW_DIST_BACK = -5f;
+	private const float FOLLOW_DIST_UP = 20f;
 	private Transform cameraTrans;
 	private CharacterController character;
 

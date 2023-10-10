@@ -26,7 +26,7 @@ public class EnemySpawnManager : MonoBehaviour
 
 
             Vector3 spawnPosition = mainCamera.ViewportToWorldPoint(spawnDirection);
-            spawnPosition.z = 0;
+            spawnPosition.y = 0;
             spawnPosition = spawnPosition.normalized * spawnDistance;
             if(UnityEngine.Random.Range(0, 2)==0)
             {
@@ -55,8 +55,8 @@ public class EnemySpawnManager : MonoBehaviour
         {
             case 0: return new Vector3(UnityEngine.Random.value,0 , spawnDistance);
             case 1: return new Vector3(UnityEngine.Random.Range(-10, 10), 0, spawnDistance);
-            case 2: return new Vector3(UnityEngine.Random.Range(-30,30), 0, spawnDistance);
-            case 3: return new Vector3(UnityEngine.Random.Range(-50, 50), 0, spawnDistance);
+            case 2: return new Vector3(UnityEngine.Random.Range(-20,-11), 0, spawnDistance);
+            case 3: return new Vector3(UnityEngine.Random.Range(10, 50), 0, spawnDistance);
             default: return Vector3.zero;
         }
     }

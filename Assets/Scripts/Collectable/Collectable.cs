@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,11 +25,23 @@ public abstract class Collectable : MonoBehaviour
             onPickedUp?.Invoke(collectableType, gameObject);
             GetComponent<Collider>().enabled = false;
             CollectableController.getInstance().unSubscribeCollectable(this);
-            Destroy(gameObject);
+            DelayedDestroy(3);
         }
 
+        void DelayedDestroy(float delay)
+    {
+        StartCoroutine(delayedDestroyCR(delay));
     }
-}
+
+    IEnumerator delayedDestroyCR(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+    }
+    }
+
+
+    }
 
 public enum CollectableType
 {

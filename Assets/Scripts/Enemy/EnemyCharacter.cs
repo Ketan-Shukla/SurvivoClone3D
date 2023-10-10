@@ -6,9 +6,10 @@ using UnityEngine.AI;
 public class EnemyCharacter : MonoBehaviour , IPlayerCanHit, IHealth
 {
     [SerializeField] GameObject coinSpawn;
+    [SerializeField] GameObject healthSpawn;
     [SerializeField] GameObject coinSpawnLocation;
     private NavMeshAgent navAgent;
-    private int maxHealth = 50;
+    private int maxHealth = 25;
     private float health;
 
     void Start()
@@ -28,13 +29,12 @@ public class EnemyCharacter : MonoBehaviour , IPlayerCanHit, IHealth
 
     public void BoostHealth()
     {
-        health += 10;
-        health = Mathf.Min(health, maxHealth);
+
     }
 
     public void TakeDamage()
     {
-        health -= 10;
+        health -= 20;
         health = Mathf.Max(health, 0);
     }
 
@@ -54,7 +54,16 @@ public class EnemyCharacter : MonoBehaviour , IPlayerCanHit, IHealth
     {
         if (health <= 0)
         {
-            Instantiate(coinSpawn, coinSpawnLocation.transform.position, Quaternion.identity);
+            if(Random.Range(0,2)== 0)
+            {
+                var gameObject = Instantiate(coinSpawn, coinSpawnLocation.transform.position, Quaternion.identity);
+                gameObject.SetActive(true);
+            }
+            else
+            {
+                var gameObject = Instantiate(healthSpawn, coinSpawnLocation.transform.position, Quaternion.identity);
+                gameObject.SetActive(true);
+            }
 
             Invoke("DestroyEnemy", 1f);
         }
@@ -63,7 +72,12 @@ public class EnemyCharacter : MonoBehaviour , IPlayerCanHit, IHealth
     void DestroyEnemy()
     {
         GetComponent<NavMeshAgent>().isStopped = true;
-        Destroy(gameObject);
+        if(GetComponent<EnemyShoot>() != null )
+        {
+            EnemyShooterPool.Instance.ReturnToPool(GetComponent<EnemyShoot>());
+            return;
+        }
+        EnemyPool.Instance.ReturnToPool(this);
 
     }
 
